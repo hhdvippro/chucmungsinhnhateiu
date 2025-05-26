@@ -1,7 +1,7 @@
 /* Cấu hình chung cho trang */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #FFB6C1; /* Màu nền hồng nhạt */
     display: flex;
     justify-content: center;
     align-items: center;
