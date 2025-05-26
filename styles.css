@@ -13,11 +13,15 @@ body {
     text-align: center;
 }
 
+/* Hiệu ứng ghép chữ LINH */
 #name {
     font-size: 80px;
     font-weight: bold;
     color: #4CAF50;
     letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 #name span {
@@ -25,6 +29,29 @@ body {
     animation: fadeIn 1s forwards;
 }
 
+#name span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#name span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+#name span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+#name span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Hiệu ứng chúc mừng */
 #birthday-message h1 {
     font-size: 50px;
     color: #FF5722;
@@ -34,11 +61,6 @@ body {
 #birthday-message p {
     font-size: 24px;
     color: #FF4081;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
 }
 
 /* Hiệu ứng pháo hoa */
