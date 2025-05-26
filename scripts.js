@@ -23,9 +23,20 @@ window.onload = function () {
         for (let i = 0; i < 5; i++) {
             const firework = document.createElement('div');
             firework.classList.add('firework');
+            
+            // Đặt vị trí ngẫu nhiên cho pháo hoa
             firework.style.left = `${Math.random() * 100}%`;
-            firework.style.animationDuration = `${Math.random() * 2 + 1}s`;  // Thời gian nổ ngẫu nhiên
+            firework.style.top = `${Math.random() * 100}%`;
+
+            // Thời gian nổ ngẫu nhiên
+            firework.style.animationDuration = `${Math.random() * 1 + 1}s`;  
+
             fireworksContainer.appendChild(firework);
+
+            // Xóa pháo hoa sau khi nổ xong
+            setTimeout(() => {
+                firework.remove();
+            }, 2000); // Thời gian pháo hoa tồn tại trên màn hình
         }
     }
 };
