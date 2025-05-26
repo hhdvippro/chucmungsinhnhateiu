@@ -5,21 +5,21 @@ window.onload = function () {
 
     nameSpans.forEach((span, index) => {
         span.style.animationDelay = `${delay}s`;
-        delay += 0.5;
+        delay += 0.5;  // Điều chỉnh độ trễ cho từng chữ
     });
 
     // Sau khi ghép chữ xong, chuyển sang phần chúc mừng sinh nhật
     setTimeout(() => {
         document.getElementById('birthday-message').style.display = 'block';
         startFireworks();
-    }, delay * 1000); // Sau khi ghép xong chữ LINH
+    }, delay * 1000); // Sau khi ghép xong chữ LINH (tính theo độ trễ)
 
     // Hàm tạo hiệu ứng pháo hoa
     function startFireworks() {
         const fireworksContainer = document.getElementById('fireworks');
         fireworksContainer.style.display = 'block';
 
-        // Tạo 5 pháo hoa
+        // Tạo 5 pháo hoa ngẫu nhiên
         for (let i = 0; i < 5; i++) {
             const firework = document.createElement('div');
             firework.classList.add('firework');
