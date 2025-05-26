@@ -1,7 +1,7 @@
 /* Cấu hình chung cho trang */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFB6C1; /* Nền hồng nhạt */
+    background-color: #FFB6C1; /* Màu nền hồng nhạt */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,8 +78,7 @@ body {
     height: 10px;
     background-color: #FF4081;
     border-radius: 50%;
-    opacity: 0;
-    animation: explode 1s forwards;
+    animation: explode 1s infinite;
 }
 
 @keyframes explode {
@@ -88,11 +87,11 @@ body {
         opacity: 1;
     }
     50% {
-        transform: scale(3);
-        opacity: 0.6;
+        transform: scale(1.5);
+        opacity: 0.5;
     }
     100% {
-        transform: scale(5);
+        transform: scale(2);
         opacity: 0;
     }
 }
