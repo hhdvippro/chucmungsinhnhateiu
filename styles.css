@@ -1,0 +1,75 @@
+/* Cấu hình chung cho trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+}
+
+#name {
+    font-size: 80px;
+    font-weight: bold;
+    color: #4CAF50;
+    letter-spacing: 10px;
+}
+
+#name span {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#birthday-message h1 {
+    font-size: 50px;
+    color: #FF5722;
+    margin-top: 20px;
+}
+
+#birthday-message p {
+    font-size: 24px;
+    color: #FF4081;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Hiệu ứng pháo hoa */
+#fireworks {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: none;
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FF4081;
+    border-radius: 50%;
+    animation: explode 1s infinite;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
